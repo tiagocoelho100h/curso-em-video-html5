@@ -1,0 +1,150 @@
+TAGS HTML CSS:
+
+<link rel="stylesheet" href="style.css"/>
+
+<!DOCTYPE html> -- DECLARA QUE SE TRATA DE UM CODIGO HTML
+
+<html> </html> -- ABRE E FECHA O CODIGO HTML
+
+<head> </head> -- AREA DE DECLARAÇÃO DA PAGINA HTML
+
+<body> </body|> -- AREA ONDE FICA O CODIGO DA PAGINA HTML
+
+<meta/> -- TAG ESPECIAL COM VARIOS ATRIBUTOS
+	charset="" -- ATRIBUTO INTERNO DA TAG <meta/> QUE DECLARA QUAL O TIPO DE CARACTERES USADO NA PAGINA
+		UTF-8 -- VALOR DO ATRIBUTO charset="" QUE DECLARA O PADRAO BRASILEIRO DE CARACTERES
+
+<title> </title> -- TAG QUE DECLARA O NOME DA PAGINA WEB
+
+<p> </p> -- DETERMINA UM PARAGRAFO
+
+<style> </style> -- ABRE E FECHA O CODIGO CSS
+
+<h1> </h1> ... <h5> </h5> -- TAG QUE DECLARA NIVEIS DE TITULOS
+
+<b> </b> -- COLOCA O TEXTO EM NEGRITO
+
+<i> </i> -- COLOCA O TEXO EM ITALICO
+
+<em> </em> -- COLOCA O TEXTO EM ITALICO E DIZ AO NAVEGAODOR PARA DAR ENFASE AO TEXTO
+
+<del> </del> -- CRIA UMA LISTRA NO TEXTO, O TEXTO FICA RISCADO
+
+<span> </span> -- SEPARA UMA PEQUENA PARTE DO TEXTO PARA QUE EU POSSA EDITALO
+
+<sup> </sup> -- TORNA UM TEXTO SUPERESCRITO
+
+<sub> </sub> -- TORNA UM TEXTO SUBSCRITO
+
+<code> </code> -- DIZ SEMANTICAMENTE PARA O NAVEGADOR QUE VOU ENSERIR UM CODIGO. GERALMENTE COMBINADO COM A TAG <pre>
+
+<pre> </pre> -- FAZ COM QUE O TEXTO SEJA PRE FORMATADO COMO FOI ESCRITO PELO PROGRAMADOR
+
+<img/> -- INSERE UMA IMAGEM NA PAGINA WEB
+	src="" -- ATRIBUTO DE <img/> QUE INDICA O LOCAL DE ORIGEM DA IMAGEM A SER INSERIDA
+
+<a> </a> -- TRANSFORMA O TEXTO EM UM LINK
+	url="" -- ATRIBUTO DE <a> </a> QUE INDICA O LOCAL PARA ONDE O LINK APONTA
+	alt="" -- 
+
+<figure> </figure> -- INDICA QUE A IMAGEM DENTRO DA TAG TEM RELAÇÃO COM O CONTEUDO EM VOLTA.
+
+<figcaption> </figcaption> -- O CONTEUDO DENTRO DESSA TAG SE TORNA A LEGENDA DA IMAGEM. ESSA TAG DEVE SER UTILIZADA DENTRO DA TAG <figure> </figure>
+
+<nav> </nav> -- TUDO DENTRO DESSA TAG PASSA A SER CONSIDERADA COMO O MENU DE NAVEGAÇÃO.
+
+<ol> </ol> -- cria uma lista ordenada
+	type="" -- atributo que muda a numeração da lista
+		i,I -- valor do atributo vira lista com algorismo romano
+		a,A -- lista alfabetica
+		1 -- lista numerica
+	start="" -- indica em que numero começa a lista
+
+<ul> </ul> -- cria uma lista não ordenada
+	type="" -- atributo que muda o marcador da lista da lista
+		squere
+		disc
+		circle
+
+<li> </li> -- cria um item em uma lista ordenada ou não ordenada
+
+
+
+&lt; -- SINAL DE MENOR
+
+&gt; -- SINAL DE MAIOR
+
+&le; -- SINAL MENOR E IGUAL
+
+&ge; -- SINAL MAIOR E IGUAL
+
+&pound; -- SINAL DE PAUTA
+
+&yen; -- SINAL DE YENE MOEDA JAPONESA
+
+&euro; -- SINAL DO EURO MOEDA EUROPEIA
+
+&copy; -- SINAL DA COPYRIGHT
+
+&reg; -- SINAL DE MARCA REGISTRADA
+
+&trade; -- SINAL DE TRADE MARCK
+
+&nbsp; -- INSERE UM ESPAÇO EM BRANCO
+
+<br/> -- INSERE UM LINHA EM BRANCO
+
+&permil; -- SIMBOLO DE PORMIL( /1000)
+
+&sum; -- SIMBOLO DE SOMA
+
+&infin; -- SIMBOLO DE INFINITO
+
+&times; -- SIMBOLO DE MULTIPLICAÇÃO
+
+&plusmn; -- SIMBOLO MAIS OU MENOS
+
+&oplus; -- SIMBOLO DE MAIS DENTRO DE UM CIRCULO
+
+&radic; -- SIMBOLO DE RAIZ QUADRADA
+
+&ne; -- SIMBOLO DE DIFERENTE
+
+&delta; -- LETRA DELTA MINUSCULA
+&Delta;
+
+&lambda; -- LETRA GREGA LAMBDA MINUSCULA
+&Lambda;
+
+&omega; -- LETRA GREGA OMEGA MINUSCULA
+&Omega;
+
+&phi; -- LETRA GREGA FI MINUSCULA
+&Phi; -- LETRA GREGA FI MAIUSCULA
+
+&larr; -- SETA PARA DIREITA
+
+&rarr; -- SETA PARA ESQUERDA
+
+&uarr; -- SETA PARA CIMA
+
+&darr; -- SETA PARA BAIXO
+
+&harr; -- SETA PARA OS DOIS LADOS
+
+
+
+PADROES DE CORES NO CSS3
+
+
+HEXADECIMAL
+
+#ffffff -- ONDE OS DOIS PRIMEIROS DIGITOS REPRESENTA A COR VERMELHA OS DOIS DIGITOS DO MEIO REPRESENTAM O VERDE E OS DOIS ULTIMOS A COR AZUL.
+
+
+
+RGB
+
+rgb(12, 256, 112) -- O PRIMEIRO DIGITO REPRESENTA A COR VERMELHA, O SEGUNDO A COR VERDE E O TERCEIRO A COR AZUL.
+
+rgba(12, 256, 112, 0.5) -- NESTE MODO O ULTIMO DIGITO REPRESENTA A QUANTIDADE DE TRANSPARENCIA DA COR. O VALOR VARIA DE 0 A 1.
