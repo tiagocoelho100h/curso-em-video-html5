@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec {
+    width: 380px;
+    height: 250px;
+    border: none;
+    /* overflow: hidden; -Não funciona no firefox. Para funcionar no Firefox tive que colocalo no arquivo google-glass.html. */
+}
+
+/* iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+} -Não funcionou no firefox.*/
