@@ -1,0 +1,44 @@
+<!--
+    Uma simples calculadora que estou fazendo para testar minhas abilidades com javaScript.
+    
+    [ok] Implementar calculadora simples.
+    [] Implementar operação de subtração.
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Testando o JavaScript</title>
+        <style>
+            form {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        </style>
+        <script>
+            function calculadora() {
+                var n1 = parseInt(document.getElementById('cxA').value);
+                var n2 = parseInt(document.getElementById('cxB').value);
+                resultado = n1 + n2;
+                document.getElementById('cxC').value = resultado;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="" oninput="calculadora();">
+            <fieldset>
+                <legend>Calculadora</legend>
+                <input type="text" name="" id="cxA" placeholder="Primeiro Numero">
+                <select name="" id="op">
+                    <option value="">+</option>
+                    <option value="">-</option>
+                </select>
+                <input type="text" name="" id="cxB" placeholder="Segundo Numero">
+                <input type="text" name="" id="cxC" readonly placeholder="Resultado">
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!-- Arquivo de exemplo de uso de CSS para criar sites responsivos. Dicas tiradas video do canal Codigo Fonte TV do Youtube. Link do video: https://www.youtube.com/watch?v=229xfk3EEM8 -->
+
+<!--
+     display: inline; - se comporta como texto. O elemeto não pode conter largura nem altura definida.
+
+     display: block; - O elemento se comporta como um bloco podendo ter largura e altura definida. Mas o mesmo não permite que dois elementos ocupem a mesma linha. Pois o container dele ainda ocupa todo a largura da pagina.
+
+     display: inline-block; - 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ex001</title>
+        <style>
+            /* Criando variaveis em CSS. */
+            :root {
+                --cinza: #888888;
+                --preto: #000000;
+            }
+
+            /* Fazendo elementos quebrarem com o alterar de tamanho da tela. */
+            .principal {
+                display: flex;
+                flex-wrap: wrap;
+                width: 80%;
+                margin: auto;
+                background-color: var(--cinza);
+            }
+
+            /* Criando elementos na tela. */
+            div div {
+                width: 200px;
+                height: 75px;
+                background-color: var(--preto);
+                margin: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="principal">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>
