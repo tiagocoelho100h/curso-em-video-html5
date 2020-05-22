@@ -1,0 +1,63 @@
+<style>
+    * {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .container {
+        background-color: #dddddd;
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        min-width: 120px;
+        max-width: 900px;
+
+        /* Trabalhando com Flex-box no elemento 'pai'. */
+
+        display: flex; /* Ativa o Flex-box na aplicação. */
+        flex-direction: row; /* Indica a direção que itens são alinhados.*/
+        flex-wrap: wrap; /* Ativa e desativa a quebra de linha.*/
+        justify-content: center; /* Alinhamento vertical dos intes. */
+        align-items: flex-start; /* Alinhamento horizontal dos itens. */
+        align-content: flex-start; /* Alinhamento do conteudo dos itens filhos. */
+    }
+
+    .item {
+        background-color: green;
+        width: 25%;
+        height: 100px;
+        min-width: 60px;
+        max-width: 100px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+
+        /* Trabalhando com Flex-box no elemetno 'filho'. */
+
+        order: 0; /* Altera a oder de exibição do elemento. */
+        flex-grow: 0; /* Determina a ocupação de colunas do elemento.*/
+        flex-shrink: 0; /* Numero de vezes que permite um intem ser reduzido. */
+        flex-basis: auto;
+        align-self: auto;
+    }
+
+    .sub-item {
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        min-width: 10px;
+        min-height: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="item">
+        <div class="sub-item"></div>
+        <div class="sub-item"></div>
+        <div class="sub-item"></div>
+    </div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+</div>

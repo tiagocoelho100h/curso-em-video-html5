@@ -1,44 +1,84 @@
 <!--
     Uma simples calculadora que estou fazendo para testar minhas abilidades com javaScript.
+    A simple calculator that I am making to test my skills with javaScript.
     
     [ok] Implementar calculadora simples.
     [] Implementar operação de subtração.
+    [] Implementar sistema de mudança de cor de fundo. / Implement background change system.
+    [ok] Implementar flex-box no layout da pagina. / Implement flex-box in the application layout.
 -->
 
+<script>
+    function calculadora() {
+        var n1 = parseInt(document.getElementById('cxA').value);
+        var n2 = parseInt(document.getElementById('cxB').value);
+        resultado = n1 + n2;
+        document.getElementById('cxC').value = resultado;
+    }
+</script>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Testando o JavaScript</title>
-        <style>
-            form {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        </style>
-        <script>
-            function calculadora() {
-                var n1 = parseInt(document.getElementById('cxA').value);
-                var n2 = parseInt(document.getElementById('cxB').value);
-                resultado = n1 + n2;
-                document.getElementById('cxC').value = resultado;
-            }
-        </script>
-    </head>
+<style>
+    * {
+        font-family: Arial, sans-serif;
+        color: #aaaaaa;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
 
-    <body>
-        <form action="" oninput="calculadora();">
-            <fieldset>
-                <legend>Calculadora</legend>
-                <input type="text" name="" id="cxA" placeholder="Primeiro Numero">
-                <select name="" id="op">
-                    <option value="">+</option>
-                    <option value="">-</option>
-                </select>
-                <input type="text" name="" id="cxB" placeholder="Segundo Numero">
-                <input type="text" name="" id="cxC" readonly placeholder="Resultado">
-            </fieldset>
-        </form>
-    </body>
-</html>
+    .application {
+        width: 80%;
+        height: 80%;
+        background-color: #dddddd;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+        padding: 20px;
+        min-width: 200px;
+
+    }
+
+    .flex-containner {
+        display: flex; /* Ativa o Flex-box na aplicação. */
+        flex-direction: row; /* Indica a direção que itens são alinhados.*/
+        flex-wrap: wrap; /* Ativa e desativa a quebra de linha.*/
+        justify-content: center; /* Alinhamento vertical dos intes. */
+        align-items: center; /* Alinhamento horizontal dos itens. */
+        align-content: center; /* Alinhamento do conteudo dos itens filhos. */
+    }
+
+    .flex-item {
+        order: 0; /* Altera a oder de exibição do elemento. */
+        flex-grow: 0; /* Determina a ocupação de colunas do elemento.*/
+        flex-shrink: 0; /* Numero de vezes que permite um intem ser reduzido. */
+        flex-basis: auto;
+        align-self: stretch;
+    }
+
+    .item {
+        border: 1px solid #888888;
+        border-radius: 5px;
+        padding: 3px;
+    }
+
+    fieldset {
+        border-radius: 5px;
+        border: 1px solid #888888;
+        padding: 40px;
+    }
+</style>
+
+<div class="">
+    <form class="flex-containner application" action="" oninput="calculadora();">
+        <fieldset>
+            <legend>Calculadora</legend>
+            <input type="text" name="" id="cxA" class="item" placeholder="Primeiro Numero">
+            <select name="" id="op" class="item">
+                <option value="">+</option>
+                <option value="">-</option>
+            </select>
+            <input type="text" name="" id="cxB" placeholder="Segundo Numero" class="item">
+            <input type="text" name="" id="cxC" readonly placeholder="Resultado" class="item">
+        </fieldset>
+    </form>
+</div>
