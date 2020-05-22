@@ -3,17 +3,37 @@
     A simple calculator that I am making to test my skills with javaScript.
     
     [ok] Implementar calculadora simples.
-    [] Implementar operação de subtração.
-    [] Implementar sistema de mudança de cor de fundo. / Implement background change system.
+    [ok] Implementar operação de subtração.
+    [ok] Implementar sistema de mudança de cor de fundo. / Implement background change system.
     [ok] Implementar flex-box no layout da pagina. / Implement flex-box in the application layout.
 -->
 
 <script>
     function calculadora() {
-        var n1 = parseInt(document.getElementById('cxA').value);
-        var n2 = parseInt(document.getElementById('cxB').value);
-        resultado = n1 + n2;
-        document.getElementById('cxC').value = resultado;
+        var op = document.getElementById('op').value;
+
+        if (op == 'som') {
+            var n1 = parseInt(document.getElementById('cxA').value);
+            var n2 = parseInt(document.getElementById('cxB').value);
+            resultado = n1 + n2;
+            document.getElementById('cxC').value = resultado;
+        }
+
+        else {
+            var n1 = parseInt(document.getElementById('cxA').value);
+            var n2 = parseInt(document.getElementById('cxB').value);
+            resultado = n1 - n2;
+            document.getElementById('cxC').value = resultado;
+        }
+        
+    }
+
+    function mudaCorNoite() {
+        document.getElementById('background-app').setAttribute('class', 'noite');
+    }
+
+    function mudaCorDia() {
+        document.getElementById('background-app').setAttribute('class', 'dia');
     }
 </script>
 
@@ -26,7 +46,7 @@
         border: 0px;
     }
 
-    .application {
+    .containner {
         width: 80%;
         height: 80%;
         background-color: #dddddd;
@@ -66,16 +86,49 @@
         border: 1px solid #888888;
         padding: 40px;
     }
+
+    .application {
+        
+    }
+
+    .bnt {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .containnerBnt {
+        border: 1px solid #888888;
+        border-radius: 5px;
+        width: 100px;
+        position: absolute;
+    }
+
+    .dia {
+        background-color: white;
+    }
+
+    .noite {
+        background-color: black;
+    }
+
+    #background-app {
+        width: 100%;
+        height: 100%;
+    }
 </style>
 
-<div class="">
-    <form class="flex-containner application" action="" oninput="calculadora();">
+<div class="dia" id="background-app">
+    <div class="containnerBnt">
+            <button id="bNt" class="bnt" onclick="mudaCorNoite();">Noite</button>
+            <button id="bDi" class="bnt" onclick="mudaCorDia();">Dia</button>
+        </div>
+    <form class="flex-containner containner" action="" oninput="calculadora();">
         <fieldset>
             <legend>Calculadora</legend>
             <input type="text" name="" id="cxA" class="item" placeholder="Primeiro Numero">
             <select name="" id="op" class="item">
-                <option value="">+</option>
-                <option value="">-</option>
+                <option value="som">+</option>
+                <option value="sub">-</option>
             </select>
             <input type="text" name="" id="cxB" placeholder="Segundo Numero" class="item">
             <input type="text" name="" id="cxC" readonly placeholder="Resultado" class="item">
