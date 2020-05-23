@@ -6,12 +6,22 @@
 
     [ok] Implemetar base HTML da aplicação.
     [ok] Implementar interface da aplicação.
-    [] Implementar script basico.
+    [ok] Implementar script basico.
+    [] Implementar verificação em tabela para dar resultado.
+    [] Implementar sistema de verificação de idade para consulta de idade diferentes.
+    [] Implementar sistema de cookie para salvar resultados de consultas na maquina por tempo.
+    [] Implementar backend da aplicação para armazenar os dados de consulta.
+    [] Implementar algoritmo no backend para identificar tendencias.
 
 -->
 
 <script>
-
+    function calculaIMC() {
+        var pesoPessoa = parseFloat(document.getElementById('peso').value);
+        var alturaPessoa = parseFloat(document.getElementById('altura').value);
+        var imcPessoa = pesoPessoa / (alturaPessoa * alturaPessoa);
+        document.getElementById('resultado').value = imcPessoa;
+    }
 </script>
 
 <style>
@@ -48,12 +58,12 @@
     }
 
     .flex-containner {
-        display: flex; /* Ativa o Flex-box na aplicação. */
-        flex-direction: column; /* Indica a direção que itens são alinhados.*/
-        flex-wrap: nowrap; /* Ativa e desativa a quebra de linha.*/
-        /* justify-content: flex-start; Alinhamento vertical dos intes. */
-        /* align-items: flex-start; Alinhamento horizontal dos itens. */
-        /* align-content: flex-start; Alinhamento do conteudo dos itens filhos. */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        /* justify-content: flex-start;*/
+        /* align-items: flex-start;*/
+        /* align-content: flex-start;*/
     }
 
     .flex-item {
@@ -79,7 +89,7 @@
 </style>
 
 <div class="page">
-    <div class="application flex-containner">
+    <div class="application flex-containner" oninput="calculaIMC();">
         <h1 class="item flex-item">Calculadora de IMC</h1>
         <p class="item flex-item">
             <label for="nome">Nome:</label>
@@ -104,7 +114,7 @@
         </p>
         <p class="item flex-item">
             <label for="resultado">Resultado:</label>
-            <input type="text" class="input" id="resultado" placeholder="Resultado">
+            <input type="text" class="input" id="resultado" placeholder="Resultado" readonly>
         </p>
     </div>
 </div>
